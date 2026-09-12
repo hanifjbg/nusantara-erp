@@ -1,6 +1,10 @@
 packages:
   - 'packages/*'
-
+  - 'apps/*'
+  - 'libs/shared/*'
 autoInstallPeers: true
 allowBuilds:
+  '@nx/general': true
+  '@swc/core': true
   nx: true
+  sharp: true

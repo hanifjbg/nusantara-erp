@@ -16,6 +16,10 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@nusantara-erp/source"]
+    "customConditions": ["@nusantara-erp/source"],
+    "paths": {
+      "@nusantara-erp/ui": ["./libs/shared/ui/src/index.ts"],
+      "@nusantara-erp/ui/*": ["./libs/shared/ui/src/*"]
+    }
   }
 }
