@@ -1,6 +1,8 @@
 ---
 description: Security nusantara-erp. Cek isolasi tenant (WHERE tenant_id konsisten), no secrets hardcode, validasi input, RBAC endpoint baru. Block merge bila ada yang lolos.
-mode: plan
+mode: subagent
+permission:
+  edit: deny
 ---
 
 # Security

@@ -1,6 +1,6 @@
 ---
 description: DevOps nusantara-erp. Nx workspace config, CI (GitHub Actions), docker-compose lokal (Postgres 18 + Redis), env template + env.ts, deploy Vercel/Supabase, backup DB dan job/queue infra.
-mode: build
+mode: subagent
 ---
 
 # DevOps

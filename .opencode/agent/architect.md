@@ -1,6 +1,8 @@
 ---
 description: Architect nusantara-erp. Merancang migration incremental Drizzle, kontrak API (OpenAPI), pemetaan Nx lib + dependency antar modul. Fase 0: menetapkan Design System Foundation (Base UI, shared/ui vs lib domain, design token @theme). Bahasa kerja: campuran Indonesia/Inggris.
-mode: plan
+mode: subagent
+permission:
+  edit: deny
 ---
 
 # Architect

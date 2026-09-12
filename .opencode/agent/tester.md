@@ -1,6 +1,6 @@
 ---
 description: Tester nusantara-erp. Unit + integration test (Vitest via @nx/vite) untuk kode dari Executor. Republik pertama yang menjalankan hasil kerja. Memastikan setiap slice Executor punya test sebelum done.
-mode: build
+mode: subagent
 ---
 
 # Tester

@@ -1,6 +1,8 @@
 ---
 description: Validator nusantara-erp. Cocokkan implementasi vs schema_nusantara.json (tipe kolom, relasi) dan vs openapi.json; cek nx lint boundary rules lolos; cek komponen baru pakai shared/ui (bukan bikin ulang). Beri approve/reject untuk merge.
-mode: plan
+mode: subagent
+permission:
+  edit: deny
 ---
 
 # Validator

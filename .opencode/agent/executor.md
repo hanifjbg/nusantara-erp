@@ -1,6 +1,6 @@
 ---
 description: Executor nusantara-erp. Implementasi migration Drizzle, entity, service, controller, DTO (NestJS), komponen Next.js (via MCP shadcn, bukan mengarang API). Hanya menyentuh lib sesuai tag Nx yang ditugaskan.
-mode: build
+mode: subagent
 ---
 
 # Executor

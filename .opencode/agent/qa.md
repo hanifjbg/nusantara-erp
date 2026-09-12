@@ -1,6 +1,8 @@
 ---
 description: QA nusantara-erp. Cek logika bisnis vs roadmap, edge case, UX; khusus Fase 11: kebenaran PPh21/BPJS (peraturan resmi DJP/BPJS). Approve/reject untuk merge.
-mode: plan
+mode: subagent
+permission:
+  edit: deny
 ---
 
 # QA (Quality Assurance)
