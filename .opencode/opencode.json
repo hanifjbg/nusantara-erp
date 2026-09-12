@@ -1,5 +1,35 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/big-pickle",
+  "small_model": "opencode/ling-3.0-flash-fin-free",
+  "instructions": ["AGENTS.md"],
+  "permission": {
+    "edit": "allow",
+    "bash": {
+      "*": "allow",
+      "rm -rf *": "ask",
+      "sudo *": "ask",
+      "git push --force*": "ask",
+      "git branch -D*": "ask",
+      "docker system prune*": "ask",
+      "drop database*": "ask",
+      "drop schema*": "ask",
+      "* truncate *": "ask",
+      "drizzle-kit push --force*": "ask",
+      "* curl | *bash": "ask",
+      "* |bash": "ask"
+    },
+    "task": "allow",
+    "external_directory": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "todowrite": "allow",
+    "question": "allow",
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow"
+  },
   "mcp": {
     "nx-mcp": {
       "type": "local",
@@ -9,6 +39,33 @@
     "shadcn-ui": {
       "type": "local",
       "command": ["npx", "-y", "@jpisnice/shadcn-ui-mcp-server", "--ui-library", "base"],
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp@latest"],
+      "enabled": true,
+      "environment": {
+        "BROWSER": "chromium",
+        "PLAYWRIGHT_BROWSERS_PATH": "/home/hanifjbg/.cache/ms-playwright"
+      }
+    },
+    "postgres": {
+      "type": "local",
+      "command": ["/media/hanifjbg/data/webdev/nusantara-erp/scripts/postgres-mcp.sh"],
+      "enabled": true
+    },
+    "github": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-github@latest"],
+      "enabled": true,
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "context7": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp"],
       "enabled": true
     }
   }
