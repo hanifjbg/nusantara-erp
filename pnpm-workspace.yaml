@@ -5,6 +5,7 @@ packages:
 autoInstallPeers: true
 allowBuilds:
   '@nx/general': true
+  '@parcel/watcher': true
   '@swc/core': true
   nx: true
   sharp: true

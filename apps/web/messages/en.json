@@ -1,0 +1,17 @@
+{
+  "common": {
+    "appName": "Nusantara ERP",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "search": "Search",
+    "actions": "Actions",
+    "error": "Something went wrong"
+  },
+  "auth": {
+    "login": "Sign in",
+    "logout": "Sign out",
+    "email": "Email",
+    "password": "Password"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "common": {
+    "appName": "Nusantara ERP",
+    "loading": "Memuat...",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "search": "Cari",
+    "actions": "Aksi",
+    "error": "Terjadi kesalahan"
+  },
+  "auth": {
+    "login": "Masuk",
+    "logout": "Keluar",
+    "email": "Email",
+    "password": "Kata sandi"
+  }
+}
