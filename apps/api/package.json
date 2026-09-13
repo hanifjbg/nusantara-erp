@@ -24,6 +24,7 @@
     "@nestjs/platform-express": "^11.1.13",
     "@nestjs/swagger": "^11.2.6",
     "@nusantara-erp/domain-identity": "workspace:*",
+    "@nusantara-erp/domain-inventory": "workspace:*",
     "@nusantara-erp/domain-master-data": "workspace:*",
     "@nusantara-erp/domain-org": "workspace:*",
     "@nusantara-erp/domain-workflow": "workspace:*",

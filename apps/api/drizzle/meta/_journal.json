@@ -57,6 +57,20 @@
       "when": 1789293392191,
       "tag": "0007_fase-03-instance-context",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1789308588000,
+      "tag": "0008_fase-04-inventory",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1789308588000,
+      "tag": "0009_fase-04-partition-rls",
+      "breakpoints": true
     }
   ]
 }

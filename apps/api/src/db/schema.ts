@@ -5,3 +5,4 @@ export * from '@nusantara-erp/domain-identity';
 export * from '@nusantara-erp/domain-org';
 export * from '@nusantara-erp/domain-master-data';
 export * from '@nusantara-erp/domain-workflow';
+export * from '@nusantara-erp/domain-inventory';

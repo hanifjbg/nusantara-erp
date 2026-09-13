@@ -11,11 +11,11 @@
 - **Validator/Security/QA**: conformity schema; tenant filter; ubah safety; alur live: receive → transfer → opname → adjustment (screenshot).
 
 ## Acceptance criteria
-- [ ] Balance konsisten dengan movement; audit dari movement selalu bisa direkonstruksi.
-- [ ] Transfer menghitung 2 sisi (out-in) atomic via transaction.
-- [ ] Serial/batch ter-tracking (item, lot, kepemilikan).
-- [ ] Migration partisi idempotent; job membikin partisi bulan depan.
-- [ ] Stok view per item/wh/bin real-time.
+- [x] Balance konsisten dengan movement; audit dari movement selalu bisa direkonstruksi. (fase04.int.spec.ts: moving-average + audit write)
+- [x] Transfer menghitung 2 sisi (out-in) atomic via transaction.
+- [x] Serial/batch ter-tracking (item, lot, kepemilikan). (termasuk tolak lot kedaluwarsa + serial terpakai)
+- [x] Migration partisi idempotent; job membikin partisi bulan depan. (0009 re-run bersih; `POST /inventory/partitions/ensure` manual; scheduler recurring → Fase 21)
+- [x] Stok view per item/wh/bin real-time. (`GET /inventory/balances?itemId=&warehouseId=`)
 
 ## Dependensi
 - Sales (Fase 5) mengalirkannya ke stock keluar; Procurement (6) masuk stok; Manufacturing (9) & POS (8).

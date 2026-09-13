@@ -18,5 +18,13 @@
       "domain:inventory",
       "type:lib"
     ]
+  },
+  "dependencies": {
+    "@nusantara-erp/domain-identity": "workspace:*",
+    "@nusantara-erp/domain-master-data": "workspace:*",
+    "drizzle-orm": "^0.45.1"
+  },
+  "scripts": {
+    "test": "vitest run"
   }
 }
