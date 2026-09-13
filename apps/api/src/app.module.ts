@@ -11,9 +11,10 @@ import { TenantsModule } from './tenants/tenants.module';
 import { UsersModule } from './users/users.module';
 import { JwtAuthGuard, PermissionsGuard } from './common/guards';
 import { HealthModule } from './health/health.module';
+import { InventoryModule } from './inventory/inventory.module';
 
 @Module({
-  imports: [HealthModule, AuthModule, TenantsModule, UsersModule, RbacModule, OrgModule, GeoModule, SystemModule, MasterDataModule, WorkflowModule],
+  imports: [HealthModule, AuthModule, TenantsModule, UsersModule, RbacModule, OrgModule, GeoModule, SystemModule, MasterDataModule, WorkflowModule, InventoryModule],
   providers: [
     { provide: APP_GUARD, useClass: JwtAuthGuard },
     { provide: APP_GUARD, useClass: PermissionsGuard },

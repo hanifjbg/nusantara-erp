@@ -1,2 +1,4 @@
-// @nusantara-erp/domain-inventory — public API (Fase 0 scaffold, implementasi menyusul per fase).
-export const DOMAIN_INVENTORY = "inventory";
+// Public API — @nusantara-erp/domain-inventory (akses lintas lib HANYA lewat file ini).
+export * from './schema/index';
+export * from './stock';
+export const DOMAIN_INVENTORY = 'inventory';

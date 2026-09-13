@@ -120,6 +120,9 @@ importers:
       '@nusantara-erp/domain-identity':
         specifier: workspace:*
         version: link:../../libs/domain/identity
+      '@nusantara-erp/domain-inventory':
+        specifier: workspace:*
+        version: link:../../libs/domain/inventory
       '@nusantara-erp/domain-master-data':
         specifier: workspace:*
         version: link:../../libs/domain/master-data
@@ -225,7 +228,17 @@ importers:
         specifier: ^0.45.1
         version: 0.45.2(postgres@3.4.9)
 
-  libs/domain/inventory: {}
+  libs/domain/inventory:
+    dependencies:
+      '@nusantara-erp/domain-identity':
+        specifier: workspace:*
+        version: link:../identity
+      '@nusantara-erp/domain-master-data':
+        specifier: workspace:*
+        version: link:../master-data
+      drizzle-orm:
+        specifier: ^0.45.1
+        version: 0.45.2(postgres@3.4.9)
 
   libs/domain/logistics: {}
 

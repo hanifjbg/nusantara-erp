@@ -45,6 +45,8 @@ export const PERMISSION_CATALOG: Array<{ code: string; name: string; module: str
   { code: 'workflow.read', name: 'Lihat workflow', module: 'workflow' },
   { code: 'workflow.manage', name: 'Kelola definisi workflow', module: 'workflow' },
   { code: 'workflow.approve', name: 'Approve workflow', module: 'workflow' },
+  { code: 'inventory.read', name: 'Lihat stok', module: 'inventory' },
+  { code: 'inventory.manage', name: 'Kelola stok (receive/issue/transfer/opname)', module: 'inventory' },
 ];
 
 /** Idempotent: insert permission katalog yang belum ada. */

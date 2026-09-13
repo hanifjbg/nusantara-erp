@@ -47,7 +47,11 @@ export default [
               sourceTag: 'domain:workflow',
               onlyDependOnLibsWithTags: ['domain:workflow', 'domain:identity', 'domain:shared'],
             },
-            { sourceTag: 'domain:inventory', onlyDependOnLibsWithTags: ['domain:inventory', 'domain:shared'] },
+            // inventory memakai fondasi identity (tenants) + master-data (items/warehouses) + shared
+            {
+              sourceTag: 'domain:inventory',
+              onlyDependOnLibsWithTags: ['domain:inventory', 'domain:master-data', 'domain:identity', 'domain:shared'],
+            },
             { sourceTag: 'domain:sales-crm', onlyDependOnLibsWithTags: ['domain:sales-crm', 'domain:shared'] },
             { sourceTag: 'domain:procurement', onlyDependOnLibsWithTags: ['domain:procurement', 'domain:shared'] },
             { sourceTag: 'domain:finance', onlyDependOnLibsWithTags: ['domain:finance', 'domain:shared'] },

@@ -29,6 +29,9 @@
   "exclude": ["dist", "node_modules", "src/**/*.spec.ts", "src/**/*.test.ts"],
   "references": [
     {
+      "path": "../../libs/domain/inventory/tsconfig.lib.json"
+    },
+    {
       "path": "../../libs/domain/workflow/tsconfig.lib.json"
     },
     {
