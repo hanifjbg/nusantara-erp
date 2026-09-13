@@ -1,0 +1,1 @@
+ALTER TABLE "workflow_instances" ADD COLUMN "context_json" jsonb DEFAULT '{}'::jsonb NOT NULL;

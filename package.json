@@ -2,12 +2,21 @@
   "name": "@nusantara-erp/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "typecheck": "nx run-many -t typecheck",
+    "build": "nx run-many -t build",
+    "lint": "nx run-many -t lint",
+    "test": "nx run-many -t test",
+    "db:baseline": "pnpm --filter @nusantara-erp/api exec drizzle-kit introspect",
+    "db:backup": "bash scripts/db-backup.sh"
+  },
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
     "@nx/devkit": "23.2.1",
+    "@nx/eslint": "23.2.1",
+    "@nx/eslint-plugin": "23.2.1",
     "@nx/js": "23.2.1",
     "@nx/next": "23.2.1",
     "@nx/playwright": "23.2.1",
@@ -20,10 +29,13 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "eslint": "^9.39.2",
     "nx": "23.2.1",
     "prettier": "~3.6.2",
     "tslib": "^2.3.0",
-    "typescript": "~6.0.3"
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.55.0",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "clsx": "^2.1.1",

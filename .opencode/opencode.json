@@ -52,8 +52,8 @@
     },
     "postgres": {
       "type": "local",
-      "command": ["/media/hanifjbg/data/webdev/nusantara-erp/scripts/postgres-mcp.sh"],
-      "enabled": true
+      "command": ["/home/webdev/nusantara-erp/scripts/postgres-mcp.sh"],
+      "enabled": false
     },
     "github": {
       "type": "local",
@@ -68,5 +68,8 @@
       "command": ["npx", "-y", "@upstash/context7-mcp"],
       "enabled": true
     }
-  }
+  },
+  "plugin": [
+    "usage"
+  ]
 }

@@ -1,0 +1,43 @@
+# Fase 0 — infra lokal nusantara-erp
+# PRIMER: Postgres 18 + Redis NATIVE yang sudah jalan di host (127.0.0.1:5432 / :6379).
+# Compose ini OPSIONAL untuk reproduksibilitas / isolasi — pakai port ALTERNATIF agar tidak tabrakan.
+# Default dev tetap konek ke Postgres lokal (lihat .env.example: POSTGRES_URL_NON_POOLING).
+name: nusantara-erp
+
+services:
+  postgres:
+    image: postgres:18
+    container_name: nusantara-postgres-18
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-agent}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-agent_local_dev_2026}
+      POSTGRES_DB: ${POSTGRES_DB:-agent_dev}
+    ports:
+      - "${DOCKER_POSTGRES_PORT:-5433}:5432"
+    volumes:
+      # PG18+: mount di /var/lib/postgresql (bukan /data) — lihat docker-library/postgres#1259
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER:-agent}']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: nusantara-redis
+    restart: unless-stopped
+    ports:
+      - "${DOCKER_REDIS_PORT:-6380}:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
+  redisdata:

@@ -1,0 +1,29 @@
+{
+  "name": "@nusantara-erp/domain-workflow",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "nx": {
+    "sourceRoot": "libs/domain/workflow/src",
+    "tags": [
+      "domain:workflow",
+      "type:lib"
+    ]
+  },
+  "dependencies": {
+    "@nusantara-erp/domain-identity": "workspace:*",
+    "drizzle-orm": "^0.45.1"
+  },
+  "scripts": {
+    "test": "vitest run"
+  }
+}

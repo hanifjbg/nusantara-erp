@@ -1,0 +1,25 @@
+ALTER TABLE "feature_flags" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "tenant_settings" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "tenants" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "login_histories" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "sessions" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "users" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "permissions" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "roles" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "branches" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "cost_centers" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "departments" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "job_grades" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "job_positions" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "organizations" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "reporting_lines" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "addresses" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "cities" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "countries" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "districts" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "provinces" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "sub_districts" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "audit_logs" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "custom_field_definitions" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "custom_field_values" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();--> statement-breakpoint
+ALTER TABLE "number_sequences" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();

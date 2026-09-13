@@ -2,10 +2,13 @@ packages:
   - 'packages/*'
   - 'apps/*'
   - 'libs/shared/*'
+  - 'libs/domain/*'
 autoInstallPeers: true
 allowBuilds:
   '@nx/general': true
   '@parcel/watcher': true
+  '@scarf/scarf': false
   '@swc/core': true
+  esbuild: true
   nx: true
   sharp: true
