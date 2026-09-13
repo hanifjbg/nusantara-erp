@@ -50,3 +50,14 @@ Thumbs.db
 .next
 out
 test-output
+
+# Env & secrets (AGENTS.md: kredensial via .env.local gitignored, baca via env.ts)
+.env
+.env.local
+.env.*.local
+!.env.example
+nusantara-baseline-dump.sql
+# Backup DB rutin (berisi data, jangan commit)
+artifacts/
+# Drizzle introspect output lokal (baseline, diregenerate)
+apps/api/src/db/introspected/

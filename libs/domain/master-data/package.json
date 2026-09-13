@@ -1,0 +1,30 @@
+{
+  "name": "@nusantara-erp/domain-master-data",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "nx": {
+    "sourceRoot": "libs/domain/master-data/src",
+    "tags": [
+      "domain:master-data",
+      "type:lib"
+    ]
+  },
+  "dependencies": {
+    "@nusantara-erp/domain-identity": "workspace:*",
+    "@nusantara-erp/domain-org": "workspace:*",
+    "drizzle-orm": "^0.45.1"
+  },
+  "scripts": {
+    "test": "vitest run"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@nusantara-erp/api",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "sourceRoot": "apps/api/src",
+    "tags": [
+      "type:app",
+      "scope:api"
+    ]
+  },
+  "scripts": {
+    "dev": "tsx watch --tsconfig tsconfig.lib.json src/main.ts",
+    "start": "node dist/main.js",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:introspect": "drizzle-kit introspect"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.13",
+    "@nestjs/core": "^11.1.13",
+    "@nestjs/jwt": "^12.0.1",
+    "@nestjs/platform-express": "^11.1.13",
+    "@nestjs/swagger": "^11.2.6",
+    "@nusantara-erp/domain-identity": "workspace:*",
+    "@nusantara-erp/domain-master-data": "workspace:*",
+    "@nusantara-erp/domain-org": "workspace:*",
+    "@nusantara-erp/domain-workflow": "workspace:*",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.3.1",
+    "drizzle-orm": "^0.45.1",
+    "postgres": "^3.4.7",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.0.0",
+    "drizzle-kit": "^0.31.8",
+    "tsx": "^4.21.0"
+  }
+}

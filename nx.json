@@ -37,8 +37,19 @@
       "options": {
         "targetName": "e2e"
       }
+    },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
     }
   ],
+  "targetDefaults": {
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/eslint.config.mjs"]
+    }
+  },
   "generators": {
     "@nx/next": {
       "application": {

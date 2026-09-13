@@ -22,6 +22,19 @@
 - [x] CI run on push: 0 error.
 - [x] git: branch pattern `agent/fase-00/*` diikuti, main hijau.
 
+## Status realita — 2026-09-12 (terverifikasi eksekusi, bukan klaim)
+- [x] typecheck 24 projects, lint 24 projects (enforce-module-boundaries), test 2 projects, build 2 projects — semua hijau.
+- [x] `apps/api` NestJS minimal boot nyata: `GET /health` → `{"status":"ok"}`, `/docs` (Swagger) → 200.
+- [x] `drizzle-kit introspect` vs Postgres lokal sukses — hasil 0 tabel (DB `agent_dev` kosong, hanya view sistem).
+  Baseline = `apps/api/src/db/schema.ts` (kosong, incremental per fase) + output introspect di `apps/api/drizzle/`.
+- [x] Partisi infra: `scripts/partition-helper.sql` (`ensure_next_month_partition`, idempotent, skip bila parent belum ada)
+  teruji di DB lokal (buat partisi `_p2026_10`, re-run OK, rollback bersih, sisa fungsi terpasang).
+- [x] Backup rutin: `scripts/db-backup.sh` teruji (dump ke `artifacts/db-backup/`, gitignored).
+- [x] CI `.github/workflows/ci.yml` (typecheck+lint+test+build) — belum ada run di GitHub (menunggu push).
+- [ ] Nx Cloud connect — manual oleh manusia (`npx nx connect`), butuh token browser.
+- Deviasi disepakati: **Postgres+Redis native lokal (127.0.0.1:5432/:6379, PG 18.6) = primer**;
+  `docker-compose.yml` opsional di port alternatif 5433/6380 agar tidak tabrakan.
+
 ## Dependensi
 - Blueprint Bagian 2.2 (dump/restore/introspect). Instance `agent_dev` → backup setelah baseline.
 

@@ -5,9 +5,9 @@
 
 | Fase | Modul | Tabel | Status |
 |---|---|---|---|
-| 0 | Scaffolding | *(infra: repo, CI, docker-compose Postgres/Redis, lint config, base UI kit, baseline Drizzle)* | ⬜ |
-| 1 | Identity, Tenancy & Org | tenants, tenant_settings, users, roles, permissions, role_permissions, user_roles, user_organizations, sessions, login_histories, organizations, branches, departments, cost_centers, reporting_lines, job_positions, job_grades, countries, provinces, cities, districts, sub_districts, addresses, number_sequences, audit_logs(+7), custom_field_definitions, custom_field_values, feature_flags | ⬜ |
-| 2 | Master Data Umum | currencies, exchange_rates, chart_of_accounts, fiscal_periods, item_categories, items, item_variants, units_of_measure, uom_conversions, customers, customer_contacts, customer_addresses, vendors, vendor_contacts, warehouses, warehouse_zones, warehouse_bins, price_lists, price_list_items, tax_codes | ⬜ |
+| 0 | Scaffolding | *(infra: repo, CI, docker-compose Postgres/Redis, lint config, base UI kit, baseline Drizzle)* | 🔶 hijau lokal 2026-09-12, sisa: Nx Cloud connect manual + CI run pertama |
+| 1 | Identity, Tenancy & Org | tenants, tenant_settings, users, roles, permissions, role_permissions, user_roles, user_organizations, sessions, login_histories, organizations, branches, departments, cost_centers, reporting_lines, job_positions, job_grades, countries, provinces, cities, districts, sub_districts, addresses, number_sequences, audit_logs(+7), custom_field_definitions, custom_field_values, feature_flags | ✅ hijau 2026-09-12 (28 tabel + RLS + API + test + E2E 20/20) |
+| 2 | Master Data Umum | currencies, exchange_rates, chart_of_accounts, fiscal_periods, item_categories, items, item_variants, units_of_measure, uom_conversions, customers, customer_contacts, customer_addresses, vendors, vendor_contacts, warehouses, warehouse_zones, warehouse_bins, price_lists, price_list_items, tax_codes | ✅ hijau 2026-09-12 (20 tabel + RLS + ~30 endpoint + E2E 18/18; UI ditunda) |
 | 3 | Workflow Engine (skeleton) | workflow_definitions, workflow_steps, workflow_instances, workflow_approval_actions | ⬜ |
 | 4 | Inventory & Stock | stock_balances, stock_movements(+6), stock_transfers, stock_opnames, serial_numbers, batch_lots | ⬜ |
 | 5 | Sales & CRM | leads, opportunities, quotations, quotation_lines, offers, sales_orders, sales_order_lines, sales_targets, commission_rules, discount_rules, promotions | ⬜ |

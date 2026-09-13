@@ -46,5 +46,9 @@
     "src/**/*.test.ts",
     ".next"
   ],
-  "references": []
+  "references": [
+    {
+      "path": "../../libs/shared/ui"
+    }
+  ]
 }

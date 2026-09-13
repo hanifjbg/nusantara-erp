@@ -5,7 +5,9 @@
     "emitDeclarationOnly": true,
     "importHelpers": true,
     "isolatedModules": true,
-    "lib": ["es2022"],
+    "lib": [
+      "es2022"
+    ],
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "noEmitOnError": true,
@@ -16,10 +18,79 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@nusantara-erp/source"],
+    "customConditions": [
+      "@nusantara-erp/source"
+    ],
     "paths": {
-      "@nusantara-erp/ui": ["./libs/shared/ui/src/index.ts"],
-      "@nusantara-erp/ui/*": ["./libs/shared/ui/src/*"]
+      "@nusantara-erp/ui": [
+        "./libs/shared/ui/src/index.ts"
+      ],
+      "@nusantara-erp/ui/*": [
+        "./libs/shared/ui/src/*"
+      ],
+      "@nusantara-erp/domain-document-legal": [
+        "./libs/domain/document-legal/src/index.ts"
+      ],
+      "@nusantara-erp/domain-field-service": [
+        "./libs/domain/field-service/src/index.ts"
+      ],
+      "@nusantara-erp/domain-finance": [
+        "./libs/domain/finance/src/index.ts"
+      ],
+      "@nusantara-erp/domain-fixed-assets": [
+        "./libs/domain/fixed-assets/src/index.ts"
+      ],
+      "@nusantara-erp/domain-hr-core": [
+        "./libs/domain/hr-core/src/index.ts"
+      ],
+      "@nusantara-erp/domain-identity": [
+        "./libs/domain/identity/src/index.ts"
+      ],
+      "@nusantara-erp/domain-inventory": [
+        "./libs/domain/inventory/src/index.ts"
+      ],
+      "@nusantara-erp/domain-logistics": [
+        "./libs/domain/logistics/src/index.ts"
+      ],
+      "@nusantara-erp/domain-manufacturing": [
+        "./libs/domain/manufacturing/src/index.ts"
+      ],
+      "@nusantara-erp/domain-marketplace": [
+        "./libs/domain/marketplace/src/index.ts"
+      ],
+      "@nusantara-erp/domain-master-data": [
+        "./libs/domain/master-data/src/index.ts"
+      ],
+      "@nusantara-erp/domain-org": [
+        "./libs/domain/org/src/index.ts"
+      ],
+      "@nusantara-erp/domain-payroll-id": [
+        "./libs/domain/payroll-id/src/index.ts"
+      ],
+      "@nusantara-erp/domain-platform": [
+        "./libs/domain/platform/src/index.ts"
+      ],
+      "@nusantara-erp/domain-pos": [
+        "./libs/domain/pos/src/index.ts"
+      ],
+      "@nusantara-erp/domain-procurement": [
+        "./libs/domain/procurement/src/index.ts"
+      ],
+      "@nusantara-erp/domain-project": [
+        "./libs/domain/project/src/index.ts"
+      ],
+      "@nusantara-erp/domain-recruitment-training": [
+        "./libs/domain/recruitment-training/src/index.ts"
+      ],
+      "@nusantara-erp/domain-sales-crm": [
+        "./libs/domain/sales-crm/src/index.ts"
+      ],
+      "@nusantara-erp/domain-support": [
+        "./libs/domain/support/src/index.ts"
+      ],
+      "@nusantara-erp/domain-workflow": [
+        "./libs/domain/workflow/src/index.ts"
+      ]
     }
   }
 }

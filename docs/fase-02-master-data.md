@@ -11,11 +11,28 @@
 - **Validator/Security/QA**: conformity vs schema; tenant filter; akses org/branch sesuai; alur master data end-to-end (screenshot).
 
 ## Acceptance criteria
-- [ ] COA: kode unik per tenant, hierarki parent/child, aktif/nonaktif.
-- [ ] Fiscal period: no overlap; periode ditutup tidak menerima transaksi.
-- [ ] Price list: resolusi harga benar (valuta + tanggal + kuantitas).
-- [ ] Tax code: multi rate/pajak kombinasi; efeksi tanggal.
+- [x] COA: kode unik per tenant, hierarki parent/child, aktif/nonaktif.
+- [x] Fiscal period: no overlap; periode ditutup tidak menerima transaksi.
+- [x] Price list: resolusi harga benar (valuta + tanggal + kuantitas).
+- [x] Tax code: multi rate/pajak kombinasi; efeksi tanggal.
 - [ ] Render UI master data via `shared/ui` components.
+
+## Status realita — 2026-09-12 (terverifikasi eksekusi)
+- Migration `0003` (20 tabel) + `0004` (18 policy tenant + 1 EXISTS policy price_list_items).
+  Total DB: 51 tabel, 35 policy. Migrate + re-run idempotent hijau.
+- API `/master/*` (~30 endpoint): currencies (+seed 10 ISO, idempotent), kurs + convert
+  (rate terakhir ≤ tanggal), CoA, fiscal (+overlap-check, +close), tax (+compute tarif
+  efektif terbaru), UoM + konversi + convertQty, kategori/item/varian, price list + items,
+  customers/vendors (+kontak, +link address), warehouses→zones→bins.
+  12 permission master-data baru (total katalog 33); 23505→409, 23503→400 via DbErrorFilter
+  (baca `.cause` karena Drizzle membungkus PostgresError).
+- Test: 27 api (11 integrasi: seed, CoA duplikat, overlap fiskal, FX, UoM, item+price,
+  isolasi tenant, partner, gudang lintas-tenant, RLS) + unit money (kurs/pajak) — hijau, 0 sisa.
+- E2E HTTP `scripts/e2e-fase02.mjs`: 18/18 (termasuk CoA duplikat→409, staff read-200/write-403).
+- Catatan jujur: price resolution by-date/customer/min-qty BELUM didukung baseline
+  (price_list_items hanya punya price_list/item/unit_price) — implementasi per-baseline;
+  "periode tertutup menolak transaksi" berlaku untuk modul transaksi Fase 4+ ( close flag tersedia);
+  UI web master data ditunda ke slice frontend (backend-first per fase).
 
 ## Dependensi
 - Dipakai Fase 3+ (workflow master), 4 (item), 5 (sales), 6 (purchase), 7 (COA).

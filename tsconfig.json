@@ -7,7 +7,73 @@
       "path": "./apps/web"
     },
     {
+      "path": "./apps/api"
+    },
+    {
       "path": "./libs/shared/ui"
+    },
+    {
+      "path": "./libs/domain/recruitment-training"
+    },
+    {
+      "path": "./libs/domain/document-legal"
+    },
+    {
+      "path": "./libs/domain/field-service"
+    },
+    {
+      "path": "./libs/domain/manufacturing"
+    },
+    {
+      "path": "./libs/domain/fixed-assets"
+    },
+    {
+      "path": "./libs/domain/marketplace"
+    },
+    {
+      "path": "./libs/domain/master-data"
+    },
+    {
+      "path": "./libs/domain/procurement"
+    },
+    {
+      "path": "./libs/domain/payroll-id"
+    },
+    {
+      "path": "./libs/domain/inventory"
+    },
+    {
+      "path": "./libs/domain/logistics"
+    },
+    {
+      "path": "./libs/domain/sales-crm"
+    },
+    {
+      "path": "./libs/domain/identity"
+    },
+    {
+      "path": "./libs/domain/platform"
+    },
+    {
+      "path": "./libs/domain/workflow"
+    },
+    {
+      "path": "./libs/domain/finance"
+    },
+    {
+      "path": "./libs/domain/hr-core"
+    },
+    {
+      "path": "./libs/domain/project"
+    },
+    {
+      "path": "./libs/domain/support"
+    },
+    {
+      "path": "./libs/domain/org"
+    },
+    {
+      "path": "./libs/domain/pos"
     }
   ]
 }

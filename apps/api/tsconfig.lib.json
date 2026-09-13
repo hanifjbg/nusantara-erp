@@ -1,0 +1,44 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "es2022",
+    "lib": ["es2022"],
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "composite": true,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "noUnusedLocals": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitOverride": false,
+    "types": ["node"],
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules", "src/**/*.spec.ts", "src/**/*.test.ts"],
+  "references": [
+    {
+      "path": "../../libs/domain/workflow/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/domain/org/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/domain/master-data/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/domain/identity/tsconfig.lib.json"
+    }
+  ]
+}
